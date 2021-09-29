@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import Navbar from './Component/Navbar';
+import Home from './Pages/Home';
+import { BrowserRouter as Router,Route,Switch } from 'react-router-dom';
+import { createGlobalStyle } from 'styled-components';
+import Footer from './Component/footer';
 function App() {
+  const GlobalStyle = createGlobalStyle `
+    body{
+      font-family: 'PT Sans', sans-serif;
+    }
+  `
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+      <GlobalStyle/>
+      <Navbar/> 
+          <Switch>
+            <Route exact path="/">
+              <div>
+                <Home/>
+              </div>
+            </Route>
+          </Switch>
+          <Footer/>
+      </div>
+    </Router>
   );
 }
 
