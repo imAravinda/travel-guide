@@ -23,21 +23,42 @@ const Navbar = () => {
         list-style-type: none;
         display: flex;
         align-items: center;
-        justify-content: center;
+        
         margin: 0px 20px;
     `
     const Li=styled.li`
+    &{
         display: inline-block;
         padding: 0 10px;
+        margin: 0 10px;
         font-size: 20px;
         color: white;
-        font-family: 'PT Sans', sans-serif;;
+        font-family: 'PT Sans', sans-serif;
+        cursor: pointer;
+        position: relative;
+    }
+    &:hover .Ho{
+        width: 50%;
+    }
     `
     const Logo = styled.img`
         width: 150px;
         height: 150px;
         position: absolute;
         padding-top:10px ;
+    `
+    const Span = styled.span`
+    &{
+        width: 0%;
+        height: 2.5px;
+        position: absolute;
+        top: 80%;
+        margin-top: 5px;
+        left: 10%;
+        background: #FFA000;
+        z-index: -1;
+        transition: 0.5s;
+    }
     `
     return ( 
         <Navbar>
@@ -47,11 +68,11 @@ const Navbar = () => {
                 </Links>
                 <Links>
                     <Ul>
-                        <Li>Home <span></span></Li>
-                        <Li>Destinations<span></span></Li>
-                        <Li>Blogs<span></span></Li>
-                        <Li>About Us<span></span></Li>
-                        <Li>Contact Us<span></span></Li>
+                        <Li>Home<Span className="Ho"></Span></Li>
+                        <Li>Destinations<Span className="Ho"></Span></Li>
+                        <Li>Blogs<Span className="Ho"></Span></Li>
+                        <Li>About Us<Span className="Ho"></Span></Li>
+                        <Li>Contact Us<Span className="Ho"></Span></Li>
                     </Ul>
                 </Links>
             </Nav>

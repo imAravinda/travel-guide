@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-const CoverContent = () => {
+const CoverContent = ({Home}) => {
         const Sec = styled.div`
         position: absolute;
         top: 30%;
@@ -29,6 +29,7 @@ const CoverContent = () => {
         color: #FFF8E1;
     `
     const Button = styled.button`
+    &{
         width: 85px;
         height: 40px;
         border-radius: 10px;
@@ -36,18 +37,30 @@ const CoverContent = () => {
         background: #FFA000;
         border: none;
         margin-top: 8%;
+        cursor: pointer;
+    }
+    &:active{
+        transform: scale(0.95);
+    }
     `
+    const content = [
+        {
+            header: "Wellcome to Travel Guide",
+            desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor dolores quam libero consectetur eum incidunt esse, tempora fugit architecto obcaecati hic temporibus voluptates blanditiis ex. Lorem ipsum dolor sit amet consectetur adipisicing elit.  Omnis, vitae suscipit. Provident, natus similique. Explicabo nam quia hic doloremque incidunt atque ab suscipit aspernatur fuga dicta modi sequi placeat, sunt facere consequatur corporis, harum sed esse odio ipsum? Ab nesciunt ad, similique explicabo voluptate alias."
+        },
+        {
+            header : "Choose the Destination",
+            desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor dolores quam libero consectetur eum incidunt esse, tempora fugit architecto obcaecati hic temporibus voluptates blanditiis ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, vitae suscipit. Provident, natus similique. Explicabo nam quia hic doloremque incidunt atque ab suscipit aspernatur fuga dicta modi sequi placeat, sunt facere consequatur corporis, harum sed esse odio ipsum? Ab nesciunt ad, similique explicabo voluptate alias."
+        }
+    ];
     return ( 
             <Sec>
                 <Divsec>   
-                    <H1>Wellcome to Travel Guide</H1>
+                    <H1>{content[0].header}</H1>
                     <HR />
                 </Divsec>
                 <Divsec>
-                    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor dolores quam libero consectetur eum incidunt esse, 
-                    tempora fugit architecto obcaecati hic temporibus voluptates blanditiis ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Omnis, vitae suscipit. Provident, natus similique. Explicabo nam quia hic doloremque incidunt atque ab suscipit aspernatur fuga dicta modi sequi placeat, sunt facere consequatur corporis, 
-                    harum sed esse odio ipsum? Ab nesciunt ad, similique explicabo voluptate alias. </P>
+                    <P>{content[0].desc}</P>
                 </Divsec>
                 <Divsec>
                     <Button>Book Now</Button>

@@ -1,11 +1,13 @@
 import Cover from "../Component/Cover";
-import CoverContent from "../Component/CoverContent";
+import styled from "styled-components";
 const Home = () => {
+    const Div = styled.div`
+        z-index:1;
+    `
     return ( 
-        <div>
+        <Div>
             <Cover/>
-            <CoverContent/>
-        </div>
+        </Div>
         
      );
 }

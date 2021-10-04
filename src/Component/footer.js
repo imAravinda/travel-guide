@@ -6,6 +6,7 @@ const Footer = () => {
     const Div = styled.div`
         background: #212121;
         color: #FFF8E1;
+        z-index: 3;
     `
     const Sec = styled.div`
         display: flex;
@@ -46,8 +47,14 @@ const Footer = () => {
         border: none;
     `
     const Icon = styled.div`
+        &{
         font-size: 30px;
         padding: 10px;
+        cursor: pointer;
+    }
+    &:active{
+        transform: scale(0.8);
+    }
     `
     const HR = styled.hr`
         border: none;
