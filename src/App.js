@@ -5,6 +5,7 @@ import Home from './Pages/Home';
 import { BrowserRouter as Router,Route,Switch } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
 import Footer from './Component/footer';
+import ScrollToTop from './Component/ScrollToTop';
 function App() {
   const GlobalStyle = createGlobalStyle `
     body{
@@ -15,7 +16,8 @@ function App() {
     <Router>
       <div className="App">
       <GlobalStyle/>
-      <Navbar/> 
+      <Navbar/>
+      <ScrollToTop/> 
           <Switch>
             <Route exact path="/">
               <div>
