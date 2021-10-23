@@ -6,5 +6,27 @@
     position: relative;
     top: -40px;
     margin-bottom: 10px;
-    
+}
+.slider:hover .text{
+    opacity: 1;
+    bottom: 80px;
+}
+.text{
+    width: 94%;
+    position: absolute;
+    bottom: 0;
+    left: 49%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 1s;
+}
+.overlay{
+    width: 92.8%;
+    height: 381px;
+    position: absolute;
+    background: #4242424d;
+    top: 2.5%;
+    cursor: pointer;
+    opacity: 1;
+    border-radius: 20px;
 }

@@ -5,7 +5,7 @@ import Home from './Pages/Home';
 import { BrowserRouter as Router,Route,Switch } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
 import Footer from './Component/footer';
-import ScrollToTop from './Component/ScrollToTop';
+import ScrollToTop from './Hooks/ScrollToTop';
 function App() {
   const GlobalStyle = createGlobalStyle `
     body{

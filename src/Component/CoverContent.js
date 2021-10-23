@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-const CoverContent = ({Home}) => {
+import content from '../Data/Content';
+const CoverContent = () => {
         const Sec = styled.div`
         position: absolute;
         top: 30%;
@@ -32,7 +33,6 @@ const CoverContent = ({Home}) => {
     &{
         width: 85px;
         height: 40px;
-        border-radius: 10px;
         color:#fff;
         background: #FFA000;
         border: none;
@@ -43,16 +43,6 @@ const CoverContent = ({Home}) => {
         transform: scale(0.95);
     }
     `
-    const content = [
-        {
-            header: "Wellcome to Travel Guide",
-            desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor dolores quam libero consectetur eum incidunt esse, tempora fugit architecto obcaecati hic temporibus voluptates blanditiis ex. Lorem ipsum dolor sit amet consectetur adipisicing elit.  Omnis, vitae suscipit. Provident, natus similique. Explicabo nam quia hic doloremque incidunt atque ab suscipit aspernatur fuga dicta modi sequi placeat, sunt facere consequatur corporis, harum sed esse odio ipsum? Ab nesciunt ad, similique explicabo voluptate alias."
-        },
-        {
-            header : "Choose the Destination",
-            desc : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor dolores quam libero consectetur eum incidunt esse, tempora fugit architecto obcaecati hic temporibus voluptates blanditiis ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, vitae suscipit. Provident, natus similique. Explicabo nam quia hic doloremque incidunt atque ab suscipit aspernatur fuga dicta modi sequi placeat, sunt facere consequatur corporis, harum sed esse odio ipsum? Ab nesciunt ad, similique explicabo voluptate alias."
-        }
-    ];
     return ( 
             <Sec>
                 <Divsec>   
