@@ -24,6 +24,8 @@ const Cover = () => {
     `
     const Before = styled.div`
         &{
+            display: flex;
+            flex-wrap: wrap;
             width: 100%;
             height: 100vh;
             position: relative;
@@ -31,22 +33,34 @@ const Cover = () => {
         }
         &::before{
             position: absolute;
+            height: 100%;
             z-index:2;
             content: '';
-            top: 0px;
-            right: 0px;
-            bottom: 0px;
-            left: 0px;
+            top: 0%;
+            right: 0%;
+            bottom: 0%;
+            left: 0%;
             background-color: #4242425d;
         }
-    `
+            @media(max-width : 1110px){
+                &{
+                    height: 100vh;
+                }&::before{
+                    height: 100%;
+                }
+        }
+        `
+        const IMG = styled.img`
+            width: 100%;
+            height: 100%;
+        `
     return ( 
         <Before>
             <OwlCarousel options={options} >
-                <Slider><img src={img1} alt="" /></Slider>
-                <Slider><img src={img2} alt="" /></Slider>
-                <Slider><img src={img3} alt="" /></Slider>
-                <Slider><img src={img4} alt="" /></Slider>
+                <Slider><IMG src={img1} alt="" /></Slider>
+                <Slider><IMG src={img2} alt="" /></Slider>
+                <Slider><IMG src={img3} alt="" /></Slider>
+                <Slider><IMG src={img4} alt="" /></Slider>
             </OwlCarousel>
             <CoverContent/>
         </Before>

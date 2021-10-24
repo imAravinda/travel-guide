@@ -19,29 +19,32 @@ const Destinations = () => {
         loop:true,
         nav:false,
     };
-    const Slider=styled.div`
-        height: 430px;
-        width: 470px;
-        z-index: 2;
-        padding: 10px;
-        border-radius: 20px;
-    `
     const Des = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-basis: 80%;
         flex-wrap: wrap;
+        padding: 0 5% ;
+    `
+    const Sec = styled.div`
+        flex-basis: 100%;
+        padding: 0 5px;
+        width: 100%;
+        margin-bottom : 5%;
+    `
+    const Slider=styled.div`
+        height: 400px;
+        width: 430px;
+        z-index: 2;
+        border-radius: 20px;
         position: relative;
-        left: 0%;
     `
     const Img = styled.img`
-        width: 470px;
-        height: 380px;
+        width: 430px;
+        height: 350px;
         border-radius: 20px;
     `
     const H1 = styled.h1`
-    &{
         text-align: center;
         font-size: 40px;
         color: #0e0900;
@@ -49,30 +52,16 @@ const Destinations = () => {
         font-weight: bold;
         position: relative;
         left: 0;
-        margin: 20px 0;;
-    }
-    &::after{
-        content: 'Destinations';
-        opacity: 0.5;
-        position: absolute;
-        left: 1.5%;
-        top: -1.5px;
-    }
+        margin-bottom: 40px;
+        border-bottom: 3px solid #FFA000;
+        display: inline;
     `
     const HR = styled.hr`
         height: 3px;
         background: #ffffff;
         border: none;
-        margin: 10px 100px;
-    `
-    const HR1 = styled.hr`
-        height: 3px;
-        background: #FFA000;
-        border: none;
-        margin: 20px;
-        width: 490%;
-        position: relative;
-        right: 200%;
+        margin: 10px ;
+        
     `
     const H3 = styled.h3`
         color: #ffffff;
@@ -83,11 +72,11 @@ const Destinations = () => {
     `
     return ( 
         <Des>
-            <div>
+            <Sec>
                 <H1>Destinations</H1>
-                <HR1/>
-            </div>
-            <OwlCarousel options={options}>
+            </Sec>
+            <Sec>
+            <OwlCarousel options={options} id="carousel">
                 <Slider className="slider">
                     <div>
                         <Img src={img1} alt="" />
@@ -206,6 +195,8 @@ const Destinations = () => {
                     </div>
                 </Slider>
             </OwlCarousel>
+            </Sec>
+            
         </Des>
      );
 }

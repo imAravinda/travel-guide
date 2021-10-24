@@ -9,22 +9,14 @@ const StroryIntro = () => {
         padding: 5% 0;
     `
     const H1 = styled.h1`
-    &{
         text-align: center;
         font-size: 40px;
         color: #0e0900;
         font-variant: small-caps;
         font-weight: bold;
         position: relative;
-    }
-    &::after{
-        content: 'This Is Our Story';
-        opacity: 0.5;
-        position: absolute;
-        left: 34.98%;
-        top: -1.5px;
-    }
-        
+        border-bottom: 3px solid #FFA000;
+        display: inline;
     `
     const P = styled.p`
         text-align:center;
@@ -50,17 +42,10 @@ const StroryIntro = () => {
         flex-basis: 60%;
         padding:20px
     `
-    const HR = styled.hr`
-        height: 3px;
-        background: #FFA000;
-        border: none;
-        margin-top: 10px;
-    `
     return ( 
         <Div>
             <Sec>
-                <H1>This Is Our Story</H1>
-                <HR />
+                <H1> This Is Our Story</H1>
             </Sec>
             <Sec>
                 <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. 

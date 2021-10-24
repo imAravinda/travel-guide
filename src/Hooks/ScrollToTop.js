@@ -13,6 +13,7 @@ const ScrollToTop = () => {
             cursor: pointer;
             border: none;
             color:#FFA000;
+            z-index: 4;
     }
     &:active{
         transform: scale(0.8);

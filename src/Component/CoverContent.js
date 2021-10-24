@@ -12,6 +12,7 @@ const CoverContent = () => {
     const Divsec = styled.div`
         flex-basis: 80%;
         margin: 0 0px 20px 35px ;
+        
     `
     const H1 = styled.h1`
         font-size: 75px;
@@ -38,6 +39,8 @@ const CoverContent = () => {
         border: none;
         margin-top: 8%;
         cursor: pointer;
+        position: relative;
+        right: 1.5%;
     }
     &:active{
         transform: scale(0.95);

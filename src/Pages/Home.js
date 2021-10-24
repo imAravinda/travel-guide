@@ -6,6 +6,9 @@ import Destinations from "../Component/Destinations";
 const Home = () => {
     const Div = styled.div`
         z-index:1;
+        width: 100%;
+        margin: 0%;
+        padding: 0%;
     `
     return ( 
         <Div>

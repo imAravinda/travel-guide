@@ -4,41 +4,33 @@ import styled from "styled-components";
 
 const Specialication = () => {
     const Div = styled.div`
-        display: block;
-        margin: 10px;
-        height: 470px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        margin: 3% 0;
     `
     const H1 = styled.h1`
-        &{
         text-align: center;
         font-size: 40px;
         color: #0e0900;
         font-variant: small-caps;
         font-weight: bold;
         position: relative;
-    }
-    &::after{
-        content: 'What Makes Us Special';
-        opacity: 0.5;
-        position: absolute;
-        left: 37.89%;
-        top: -1.5px;
-    }
+        left: 0;
+        border-bottom: 3px solid #FFA000;
+        display: inline;
     `
-     const HR = styled.hr`
-        height: 3px;
-        background: #FFA000;
-        border: none;
-        margin-top: 10px;
-        width: 60%;
-        position: relative;
-        left: 20%;
-    `
-    const Sec = styled.div`
+    const MainSubSec = styled.div`
         display: flex;
         justify-content: space-around;
         align-items: center;
-        margin: 80px 10px;
+    `
+    const Sec = styled.div`
+        flex-basis: 100%;
+        margin: 20px 10px;
+        width: 100%;
     `
     const SubSec = styled.div`
         margin: 15px;
@@ -61,9 +53,11 @@ const Specialication = () => {
     `
     return ( 
         <Div>
-            <H1>What Makes Us Special</H1>
-            <HR />
             <Sec>
+                <H1>What Makes Us Special</H1>
+            </Sec>
+            <Sec>
+                <MainSubSec>
                 <SubSec>
                     <Icon>
                         <FontAwesomeIcon icon = {faTrain}/>
@@ -91,6 +85,7 @@ const Specialication = () => {
                         Vitae nesciunt incidunt non cupiditate optio ut aliquid harum, 
                         fugiat debitis repellendus?</P>
                 </SubSec>
+                </MainSubSec>
             </Sec> 
         </Div>
      );
