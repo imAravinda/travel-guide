@@ -27,16 +27,32 @@ const StroryIntro = () => {
         width: 100px;
         height: 45px;
         color: #0e0900;
-        border-color: #FFA000;
         background-color: transparent;
-        transition: 0.5s;
+        transition: color 0.3s;
         font-weight:bold;
         cursor: pointer;
+        position: relative;
+        z-index:1;
+        border: 2px solid #FFA000;
     }
     &:hover{
-        background-color: #FFA000;
         color: #ffffff;
-    }        
+    }   
+    &:active{
+        transform: scale(0.95);
+    }     
+    `
+    const Span = styled.span`
+        width: 0;
+        height: 100%;
+        position: absolute;
+        background: #FFA000;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        transition: 0.5s;
     `
     const Sec = styled.div`
         flex-basis: 60%;
@@ -53,7 +69,7 @@ const StroryIntro = () => {
                     Odio consequatur accusamus et amet iste. Iste impedit dicta ex aperiam.</P>
             </Sec>
             <Sec>
-                <Button>Read More</Button>
+                <Button><Span></Span>Read More</Button>
             </Sec>
         </Div>
      );
