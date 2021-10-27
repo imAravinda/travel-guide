@@ -9,7 +9,7 @@ import img2 from "./Images/recal-media-ueBIGLmiI5A-unsplash.jpg";
 import img3 from "./Images/oleg-illarionov-q9q8bi0Aw7o-unsplash.jpg";
 import img4 from "./Images/vitalii-tkachenko-lQ9lHXL73e8-unsplash.jpg";
 import CoverContent from './CoverContent';
-const Cover = () => {
+const Cover = (props) => {
     const options = {
         items: 1,
         rewind: true,
@@ -62,7 +62,7 @@ const Cover = () => {
                 <Slider><IMG src={img3} alt="" /></Slider>
                 <Slider><IMG src={img4} alt="" /></Slider>
             </OwlCarousel>
-            <CoverContent/>
+            <CoverContent text={props.Cover1text}/>
         </Before>
      );
 }

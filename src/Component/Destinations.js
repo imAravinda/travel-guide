@@ -36,13 +36,13 @@ const Destinations = () => {
         height: 400px;
         width: 430px;
         z-index: 2;
-        border-radius: 20px;
+        border-radius: 10px;
         position: relative;
     `
     const Img = styled.img`
         width: 430px;
         height: 350px;
-        border-radius: 20px;
+        border-radius: 10px;
     `
     const H1 = styled.h1`
         text-align: center;
@@ -73,7 +73,7 @@ const Destinations = () => {
     return ( 
         <Des>
             <Sec>
-                <H1>Destinations</H1>
+                <H1>Top Destinations</H1>
             </Sec>
             <Sec>
             <OwlCarousel options={options} id="carousel">

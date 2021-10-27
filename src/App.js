@@ -6,12 +6,15 @@ import { BrowserRouter as Router,Route,Switch } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
 import Footer from './Component/footer';
 import ScrollToTop from './Hooks/ScrollToTop';
+import content from './Data/Content';
+import Destination from './Pages/Destination';
 function App() {
   const GlobalStyle = createGlobalStyle `
     body{
       font-family: 'PT Sans', sans-serif;
     }
   `
+  console.log(content);
   return (
     <Router>
       <div className="App">
@@ -21,7 +24,12 @@ function App() {
           <Switch>
             <Route exact path="/">
               <div>
-                <Home/>
+                <Home Covertext={content[0]}/>
+              </div>
+            </Route>
+            <Route exact path="/destination">
+              <div>
+                <Destination Covertext={content[1]}/>
               </div>
             </Route>
           </Switch>

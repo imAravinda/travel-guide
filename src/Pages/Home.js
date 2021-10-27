@@ -3,7 +3,8 @@ import styled from "styled-components";
 import StroryIntro from "../Component/StoryIntro";
 import Specialication from "../Component/Specialication";
 import Destinations from "../Component/Destinations";
-const Home = () => {
+import Testimonials from "../Component/userReview&Q&A";
+const Home = (props) => {
     const Div = styled.div`
         z-index:1;
         width: 100%;
@@ -12,10 +13,11 @@ const Home = () => {
     `
     return ( 
         <Div>
-            <Cover/>
+            <Cover Cover1text = {props.Covertext}/>
             <StroryIntro/>
             <Specialication/>
             <Destinations/>
+            <Testimonials/>
         </Div>
         
      );

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import content from '../Data/Content';
-const CoverContent = () => {
+
+const CoverContent = (props) => {
         const Sec = styled.div`
         position: absolute;
         top: 30%;
@@ -49,11 +49,11 @@ const CoverContent = () => {
     return ( 
             <Sec>
                 <Divsec>   
-                    <H1>{content[0].header}</H1>
+                    <H1>{props.text.header}</H1>
                     <HR />
                 </Divsec>
                 <Divsec>
-                    <P>{content[0].desc}</P>
+                    <P>{props.text.desc}</P>
                 </Divsec>
                 <Divsec>
                     <Button>Book Now</Button>
