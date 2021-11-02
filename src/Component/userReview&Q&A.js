@@ -2,13 +2,20 @@ import OwlCarousel from 'react-owl-carousel2';
 import 'react-owl-carousel2/lib/styles.css';
 import 'react-owl-carousel2/src/owl.theme.default.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faInstagram, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import styled from 'styled-components';
 import img1 from "./Images/user1.jpg";
 import img2 from "./Images/user2.jpg";
 import img3 from "./Images/user3.jpg"
 import img4 from "./Images/user4.jpg"
+import { useState } from 'react';
 const Testimonials = () => {
+
+    const [visible,setVisible] = useState(false);
+
+    const handleClick = ()=>{
+       visible ? setVisible(false) : setVisible(true);
+    }
     const options = {
         items: 1,
         rewind: true,
@@ -18,19 +25,25 @@ const Testimonials = () => {
     }
     const Div = styled.div`
         display: flex;
-        justify-content: space-between;
         align-items: center;
-
+        padding: 0 5%;
     `
-    const Sec = styled.div`
-        flex-basis: 50%;
+    const SecLeft = styled.div`
         width: 50%;
         margin-bottom : 5%;
         height: 400px;
     `
+    const SecRight = styled.div`
+        display: grid;
+        width: 50%;
+        margin-bottom : 5%;
+        height: 400px;
+        justify-content: right;
+        padding-right:2%;
+    `
     const Slider = styled.div`
             height: 300px;
-            width: 100%;
+            width: 80%;
             z-index: 2;
             border-radius: 10px;
     `
@@ -43,9 +56,9 @@ const Testimonials = () => {
         text-align: left;
     `
     const Img = styled.img`
-        width: 50;
-        height: 50px;
-        border-radius:100px;
+        width: 70px;
+        height: 70px;
+        border-radius:200px;
     `
     const Imgdiv = styled.div`
         display: inline-flex;
@@ -59,8 +72,7 @@ const Testimonials = () => {
     const Image = styled.div`
         display: flex;
         justify-content: center;
-        width: 50px;
-        flex-basis: 14%;
+        width: 70px;
     `
     const Icon = styled.div`
     &{
@@ -69,8 +81,6 @@ const Testimonials = () => {
         padding: 10px;
         cursor: pointer;
         color: #FFA000;
-        position: relative;
-        top: 25%;
     }
     &:hover{
         color:#FFA000BD ;
@@ -84,10 +94,40 @@ const Testimonials = () => {
     const Icons = styled.div`
        flex-basis: 40%;
     `
+    const H1=styled.h1`
+        font-size: 50px;
+        text-align: left;
+        margin-bottom: 20px;
+    `
+    const P1 = styled.p`
+        &{  
+            width: 100%;
+            height: 80%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+            text-align: justify;
+            margin-bottom: 5%;
+        }
+        &:hover{
+            
+            background-color: #FFA000;
+            padding-left: 10px;
+            cursor: pointer;
+        }
+    `
+    const Span = styled.span`
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 100%;
+        margin-bottom: 10%;
+    `
     return ( 
         <Div>
-            <Sec>
-                <h1>Testimonials</h1>
+            <SecLeft>
+                <H1>Testimonials</H1>
                 <OwlCarousel options={options} id="review">
                     <Slider>
                         <Imgdiv>
@@ -198,14 +238,42 @@ const Testimonials = () => {
                         </div>
                     </Slider>
                 </OwlCarousel>
-            </Sec>
-            <Sec>
-                <h1>Q & A</h1>
-                <p>How Book a Trip ?</p><br />
-                <p>How choose Best Destination ?</p>
-                <p>How choose Best Destination ?</p>
-                <p>How choose Best Destination ?</p>
-            </Sec>
+            </SecLeft>
+            <SecRight>
+                <H1>Frequently Asked <br /> Questions</H1>
+                    <P1 onClick={handleClick}>
+                        + How Book a Trip ?
+                        {visible && 
+                            <Span>
+                                <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, numquam.</P>
+                            </Span>
+                        }
+                    </P1>
+                <P1 onClick={handleClick}>
+                    + How choose Best Destination ?
+                    {visible && 
+                        <Span>
+                            <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, numquam.</P>
+                        </Span>
+                    }
+                </P1>
+                <P1 onClick={handleClick}>
+                    + How choose Best Destination ?
+                    {visible && 
+                        <Span>
+                            <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, numquam.</P>
+                        </Span>
+                    }
+                </P1>
+                <P1 onClick={handleClick}>
+                    + How choose Best Destination ?
+                    {visible && 
+                        <Span>
+                            <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, numquam.</P>
+                        </Span>
+                    }
+                </P1>
+            </SecRight>
         </Div>
      );
 }

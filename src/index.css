@@ -11,8 +11,12 @@
     width: 100%;
 }
 #review{
-    width: 50%;
-    display: inline-block;
+    width: 80%;
+    display:flex;
+    flex-wrap: wrap;
+}
+#review .owl-dots{
+    margin-top: -3%;
 }
 .slider:hover .text{
     opacity: 1;
