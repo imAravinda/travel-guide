@@ -11,7 +11,7 @@ import img4 from "./Images/user4.jpg"
 import { useState } from 'react';
 const Testimonials = () => {
 
-    const [visible,setVisible] = useState(false);
+    const [visible = [3],setVisible] = useState(false);
 
     const handleClick = ()=>{
        visible ? setVisible(false) : setVisible(true);
@@ -98,6 +98,7 @@ const Testimonials = () => {
         font-size: 50px;
         text-align: left;
         margin-bottom: 20px;
+        font-variant: small-caps;
     `
     const P1 = styled.p`
         &{  
@@ -105,13 +106,14 @@ const Testimonials = () => {
             height: 80%;
             position: relative;
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
             font-size: 20px;
             text-align: justify;
             margin-bottom: 5%;
+            top: 0;
         }
         &:hover{
-            
             background-color: #FFA000;
             padding-left: 10px;
             cursor: pointer;
@@ -119,7 +121,7 @@ const Testimonials = () => {
     `
     const Span = styled.span`
         width: 100%;
-        height: 100%;
+        height: 0;
         position: absolute;
         top: 100%;
         margin-bottom: 10%;
@@ -251,7 +253,7 @@ const Testimonials = () => {
                     </P1>
                 <P1 onClick={handleClick}>
                     + How choose Best Destination ?
-                    {visible && 
+                    {visible[1] && 
                         <Span>
                             <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, numquam.</P>
                         </Span>
@@ -259,7 +261,7 @@ const Testimonials = () => {
                 </P1>
                 <P1 onClick={handleClick}>
                     + How choose Best Destination ?
-                    {visible && 
+                    {visible[2] && 
                         <Span>
                             <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, numquam.</P>
                         </Span>
@@ -267,7 +269,7 @@ const Testimonials = () => {
                 </P1>
                 <P1 onClick={handleClick}>
                     + How choose Best Destination ?
-                    {visible && 
+                    {visible[3] && 
                         <Span>
                             <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, numquam.</P>
                         </Span>
