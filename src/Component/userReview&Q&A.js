@@ -8,14 +8,8 @@ import img1 from "./Images/user1.jpg";
 import img2 from "./Images/user2.jpg";
 import img3 from "./Images/user3.jpg"
 import img4 from "./Images/user4.jpg"
-import { useState } from 'react';
 const Testimonials = () => {
 
-    const [visible = [3],setVisible] = useState(false);
-
-    const handleClick = ()=>{
-       visible ? setVisible(false) : setVisible(true);
-    }
     const options = {
         items: 1,
         rewind: true,
@@ -100,18 +94,14 @@ const Testimonials = () => {
         margin-bottom: 20px;
         font-variant: small-caps;
     `
-    const P1 = styled.p`
+    const P1 = styled.summary`
         &{  
             width: 100%;
-            height: 80%;
-            position: relative;
+            height: 40px;
+            position: absolute;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            font-size: 20px;
-            text-align: justify;
-            margin-bottom: 5%;
-            top: 0;
         }
         &:hover{
             background-color: #FFA000;
@@ -119,12 +109,21 @@ const Testimonials = () => {
             cursor: pointer;
         }
     `
-    const Span = styled.span`
-        width: 100%;
-        height: 0;
-        position: absolute;
-        top: 100%;
-        margin-bottom: 10%;
+    const Details = styled.details`
+            position: relative;
+            width: 500px;
+            height: 80%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            font-size: 20px;
+            text-align: justify;
+    `
+    const P2 = styled.p`
+        position: relative;
+        top: 20px;
+        padding-top: 20px;
+        text-align: justify;
     `
     return ( 
         <Div>
@@ -243,38 +242,22 @@ const Testimonials = () => {
             </SecLeft>
             <SecRight>
                 <H1>Frequently Asked <br /> Questions</H1>
-                    <P1 onClick={handleClick}>
-                        + How Book a Trip ?
-                        {visible && 
-                            <Span>
-                                <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, numquam.</P>
-                            </Span>
-                        }
-                    </P1>
-                <P1 onClick={handleClick}>
-                    + How choose Best Destination ?
-                    {visible[1] && 
-                        <Span>
-                            <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, numquam.</P>
-                        </Span>
-                    }
-                </P1>
-                <P1 onClick={handleClick}>
-                    + How choose Best Destination ?
-                    {visible[2] && 
-                        <Span>
-                            <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, numquam.</P>
-                        </Span>
-                    }
-                </P1>
-                <P1 onClick={handleClick}>
-                    + How choose Best Destination ?
-                    {visible[3] && 
-                        <Span>
-                            <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, numquam.</P>
-                        </Span>
-                    }
-                </P1>
+                <Details>
+                    <P1>How Book a Trip ?</P1>
+                    <P2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, numquam.</P2> 
+                </Details>
+                <Details>
+                    <P1>How Book a Trip ?</P1>
+                    <P2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, numquam.</P2> 
+                </Details>
+                <Details>
+                    <P1>How Book a Trip ?</P1>
+                    <P2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, numquam.</P2> 
+                </Details>
+                <Details>
+                    <P1>How Book a Trip ?</P1>
+                    <P2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, numquam.</P2> 
+                </Details>
             </SecRight>
         </Div>
      );

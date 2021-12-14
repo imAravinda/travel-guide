@@ -45,3 +45,10 @@ Button:hover Span{
     border-radius: 10px;
     position: absolute;
 }
+.Heading{
+    background-color: none;
+}
+.new{
+    background-color:  #FFA000;
+    padding-left: 10px;
+}
