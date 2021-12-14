@@ -8,7 +8,7 @@ import img1 from "./Images/jess-snoek-rDud6SN-ZVo-unsplash.jpg";
 import img2 from "./Images/recal-media-ueBIGLmiI5A-unsplash.jpg";
 import img3 from "./Images/oleg-illarionov-q9q8bi0Aw7o-unsplash.jpg";
 import img4 from "./Images/vitalii-tkachenko-lQ9lHXL73e8-unsplash.jpg";
-import CoverContent from './CoverContent';
+import CoverContent from "./CoverContent"
 const Cover = (props) => {
     const options = {
         items: 1,
