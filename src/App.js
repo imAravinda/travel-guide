@@ -14,7 +14,7 @@ function App() {
       font-family: 'PT Sans', sans-serif;
     }
   `
-  console.log(content);
+  // console.log(content);
   return (
     <Router>
       <div className="App">

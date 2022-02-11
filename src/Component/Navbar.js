@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import img from "./Images/Logo-removebg-preview.png";
 import { Link } from "react-router-dom";
-const Navbar = () => {
+const Navbar = (props) => {
     const Navbar=styled.div`
         display: block;
         margin: 0;
@@ -62,6 +62,7 @@ const Navbar = () => {
         transition: 0.5s;
     }
     `
+    
     const ScrollToTop = ()=>{
         if(window.pageYOffset > 200){
             window.scrollTo({
@@ -71,7 +72,7 @@ const Navbar = () => {
         }
     }
     return ( 
-        <Navbar>
+        <Navbar >
             <Nav>
                 <Links>
                     <Logo src={img} alt="" /> 
