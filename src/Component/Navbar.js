@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import img from "./Images/Logo-removebg-preview.png";
+import { Link } from "react-router-dom";
 const Navbar = () => {
     const Navbar=styled.div`
         display: block;
@@ -54,12 +55,21 @@ const Navbar = () => {
         position: absolute;
         top: 80%;
         margin-top: 5px;
-        left: 10%;
+        display: flex;
+        justify-content: center;
         background: #FFA000;
         z-index: -1;
         transition: 0.5s;
     }
     `
+    const ScrollToTop = ()=>{
+        if(window.pageYOffset > 200){
+            window.scrollTo({
+                top:0,
+                behavior: "smooth"
+            })
+        }
+    }
     return ( 
         <Navbar>
             <Nav>
@@ -68,11 +78,11 @@ const Navbar = () => {
                 </Links>
                 <Links>
                     <Ul>
-                        <Li>Home<Span className="Ho"></Span></Li>
-                        <Li>Destinations<Span className="Ho"></Span></Li>
-                        <Li>Blogs<Span className="Ho"></Span></Li>
-                        <Li>About Us<Span className="Ho"></Span></Li>
-                        <Li>Contact Us<Span className="Ho"></Span></Li>
+                        <Li className="li" onClick={ScrollToTop}><Link to="/">Home<Span className="Ho"></Span></Link></Li>
+                        <Li className="li" onClick={ScrollToTop}><Link to="./destination">Destinations<Span className="Ho"></Span></Link></Li>
+                        <Li className="li" onClick={ScrollToTop}><Link to=" ">Blogs<Span className="Ho"></Span></Link></Li>
+                        <Li className="li" onClick={ScrollToTop}><Link to=" ">About Us<Span className="Ho"></Span></Link></Li>
+                        <Li className="li" onClick={ScrollToTop}><Link to=" ">Contact Us<Span className="Ho"></Span></Link></Li>
                     </Ul>
                 </Links>
             </Nav>
