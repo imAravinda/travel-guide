@@ -1,4 +1,3 @@
-import OwlCarousel from 'react-owl-carousel2';
 import 'react-owl-carousel2/lib/styles.css';
 import 'react-owl-carousel2/src/owl.theme.default.css';
 import img1 from "./Images/IMG_3573.JPG";
@@ -12,19 +11,19 @@ import img8 from "./Images/Knuckels.jpg"
 import img9 from "./Images/OldDutchFort.jpg"
 import styled from 'styled-components';
 const Destinations = () => {
-    const options = {
-        items: 3,
-        rewind: true,
-        autoplay: true,
-        loop:true,
-        nav:false,
-    };
     const Des = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
         padding: 0 5% ;
+        margin-top: 5%;
+    `
+    const Row = styled.div`
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
     `
     const Sec = styled.div`
         flex-basis: 100%;
@@ -38,6 +37,12 @@ const Destinations = () => {
         z-index: 2;
         border-radius: 10px;
         position: relative;
+        flex-direction: column;
+        flex: 0 1 25%;
+        justify-content: center;
+        align-items: center;
+        margin: 0 10px;
+        
     `
     const Img = styled.img`
         width: 430px;
@@ -70,131 +75,78 @@ const Destinations = () => {
     const P = styled.p`
         color: #fff;
     `
+    const Destination = [
+        {
+            img:`${img1}`,
+            Name: "Bathalangonduwa",
+            Description : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat illum minima unde eaque totam veniam reprehenderit tempore, autem est illo, voluptatum, nulla sed minus amet?"
+        },
+        {
+            img:`${img2}`,
+            Name: "Sigiriya",
+            Description : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat illum minima unde eaque totam veniam reprehenderit tempore, autem est illo, voluptatum, nulla sed minus amet?"
+        },
+        {
+            img:`${img3}`,
+            Name: "Arugam-Bay",
+            Description : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat illum minima unde eaque totam veniam reprehenderit tempore, autem est illo, voluptatum, nulla sed minus amet?"
+        },
+        {
+            img:`${img4}`,
+            Name: "Adem's Peak",
+            Description : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat illum minima unde eaque totam veniam reprehenderit tempore, autem est illo, voluptatum, nulla sed minus amet?"
+        },
+        {
+            img:`${img5}`,
+            Name: "Dunsinun Falls",
+            Description : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat illum minima unde eaque totam veniam reprehenderit tempore, autem est illo, voluptatum, nulla sed minus amet?"
+        },
+        {
+            img:`${img6}`,
+            Name: "Ella Rock",
+            Description : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat illum minima unde eaque totam veniam reprehenderit tempore, autem est illo, voluptatum, nulla sed minus amet?"
+        },
+        {
+            img:`${img7}`,
+            Name: "Hikkaduwa",
+            Description : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat illum minima unde eaque totam veniam reprehenderit tempore, autem est illo, voluptatum, nulla sed minus amet?"
+        },
+        {
+            img:`${img8}`,
+            Name: "Knuckles Mountain Range",
+            Description : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat illum minima unde eaque totam veniam reprehenderit tempore, autem est illo, voluptatum, nulla sed minus amet?"
+        },
+        {
+            img:`${img9}`,
+            Name: "Galle Old Dutch Fort",
+            Description : "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat illum minima unde eaque totam veniam reprehenderit tempore, autem est illo, voluptatum, nulla sed minus amet?"
+        }
+    ]
     return ( 
         <Des>
             <Sec>
                 <H1>Top Destinations</H1>
             </Sec>
             <Sec>
-            <OwlCarousel options={options} id="carousel">
-                <Slider className="slider">
-                    <div>
-                        <Img src={img1} alt="" />
-                    </div>
-                    <div className="overlay"></div>
-                    <div className="text">
-                        <H3>Bathhalangonduwa</H3>
-                        <HR />
-                        <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                            Quaerat illum minima unde eaque totam veniam reprehenderit tempore, 
-                            autem est illo, voluptatum, nulla sed minus amet?</P>
-                    </div>
-                </Slider>
-                <Slider className="slider">
-                    <div>
-                        <Img src={img2} alt="" />
-                    </div>
-                    <div className="overlay"></div>
-                    <div className="text">
-                        <H3>Sigiriya</H3>
-                        <HR />
-                        <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                            Quaerat illum minima unde eaque totam veniam reprehenderit tempore, 
-                            autem est illo, voluptatum, nulla sed minus amet?</P>
-                    </div>    
-                </Slider>
-                <Slider className="slider">
-                    <div>
-                        <Img src={img3} alt="" />
-                    </div>
-                    <div className="overlay"></div>
-                    <div className="text">
-                        <H3>Arugam Bay</H3>
-                        <HR />
-                        <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                            Quaerat illum minima unde eaque totam veniam reprehenderit tempore, 
-                            autem est illo, voluptatum, nulla sed minus amet?</P>
-                    </div>    
-                </Slider>
-                <Slider className="slider">
-                    <div>
-                        <Img src={img4} alt="" />
-                    </div>
-                    <div className="overlay"></div>
-                    <div className="text">
-                        <H3>Adam's Peak</H3>
-                        <HR />
-                        <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                            Quaerat illum minima unde eaque totam veniam reprehenderit tempore, 
-                            autem est illo, voluptatum, nulla sed minus amet?</P>
-                    </div>
-                </Slider>
-                <Slider className="slider">
-                    <div>
-                        <Img src={img5} alt="" />
-                    </div>
-                    <div className="overlay"></div>
-                    <div className="text">
-                        <H3>Dunsinane Fall</H3>
-                        <HR />
-                        <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                            Quaerat illum minima unde eaque totam veniam reprehenderit tempore, 
-                            autem est illo, voluptatum, nulla sed minus amet?</P>
-                    </div>
-                </Slider>
-                <Slider className="slider">
-                    <div>
-                        <Img src={img6} alt="" />
-                    </div>
-                    <div className="overlay"></div>
-                    <div className="text">
-                        <H3>Ella Rock</H3>
-                        <HR />
-                        <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                            Quaerat illum minima unde eaque totam veniam reprehenderit tempore, 
-                            autem est illo, voluptatum, nulla sed minus amet?</P>
-                    </div>
-                </Slider>
-                <Slider className="slider">
-                    <div>
-                        <Img src={img7} alt="" />
-                    </div>
-                    <div className="overlay"></div>
-                    <div className="text">
-                        <H3>Hikkaduwa</H3>
-                        <HR />
-                        <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                            Quaerat illum minima unde eaque totam veniam reprehenderit tempore, 
-                            autem est illo, voluptatum, nulla sed minus amet?</P>
-                    </div>
-                </Slider>
-                <Slider className="slider">
-                    <div>
-                        <Img src={img8} alt="" />
-                    </div>
-                    <div className="overlay"></div>
-                    <div className="text">
-                        <H3>Knuckels Mountain Range</H3>
-                        <HR />
-                        <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                            Quaerat illum minima unde eaque totam veniam reprehenderit tempore, 
-                            autem est illo, voluptatum, nulla sed minus amet?</P>
-                    </div>
-                </Slider>
-                <Slider className="slider">
-                    <div>
-                        <Img src={img9} alt="" />
-                    </div>
-                    <div className="overlay"></div>
-                    <div className="text">
-                        <H3>Old Dutch Fort - Galle</H3>
-                        <HR />
-                        <P>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                            Quaerat illum minima unde eaque totam veniam reprehenderit tempore, 
-                            autem est illo, voluptatum, nulla sed minus amet?</P>
-                    </div>
-                </Slider>
-            </OwlCarousel>
+                <Row>
+                    {
+                        Destination.map(destination => {
+                            return(
+                                <Slider className="slider">
+                                    <div>
+                                        <Img src={destination.img} alt="" />
+                                    </div>
+                                    <div className="overlay"></div>
+                                    <div className="text">
+                                        <H3>{destination.Name}</H3>
+                                        <HR />
+                                        <P>{destination.Description}</P>
+                                    </div>
+                                </Slider>      
+                            )
+                        })
+                    }
+                </Row>
             </Sec>
             
         </Des>

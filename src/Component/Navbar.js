@@ -81,9 +81,9 @@ const Navbar = (props) => {
                     <Ul>
                         <Li className="li" onClick={ScrollToTop}><Link to="/">Home<Span className="Ho"></Span></Link></Li>
                         <Li className="li" onClick={ScrollToTop}><Link to="./destination">Destinations<Span className="Ho"></Span></Link></Li>
-                        <Li className="li" onClick={ScrollToTop}><Link to=" ">Blogs<Span className="Ho"></Span></Link></Li>
+                        <Li className="li" onClick={ScrollToTop}><Link to="./blog">Blogs<Span className="Ho"></Span></Link></Li>
                         <Li className="li" onClick={ScrollToTop}><Link to=" ">About Us<Span className="Ho"></Span></Link></Li>
-                        <Li className="li" onClick={ScrollToTop}><Link to=" ">Contact Us<Span className="Ho"></Span></Link></Li>
+                        {/* <Li className="li" onClick={ScrollToTop}><Link to=" ">Contact Us<Span className="Ho"></Span></Link></Li> */}
                     </Ul>
                 </Links>
             </Nav>

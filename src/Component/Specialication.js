@@ -1,7 +1,7 @@
 import { faGlobeAsia, faHotel, faTrain } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
-
+import Bgimg from "./Images/max-vertsanov-Sr5sVt9UG4Q-unsplash.jpg";
 const Specialication = () => {
     const Div = styled.div`
         display: flex;
@@ -9,7 +9,7 @@ const Specialication = () => {
         justify-content: center;
         align-items: center;
         height: 100%;
-        margin: 3% 0;
+        padding: 3% 0;
     `
     const H1 = styled.h1`
         text-align: center;

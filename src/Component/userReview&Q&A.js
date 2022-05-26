@@ -21,6 +21,8 @@ const Testimonials = () => {
         display: flex;
         align-items: center;
         padding: 0 5%;
+        height: 100vh;
+        margin-bottom: 3%;
     `
     const SecLeft = styled.div`
         width: 50%;
@@ -118,6 +120,7 @@ const Testimonials = () => {
             align-items: center;
             font-size: 20px;
             text-align: justify;
+            margin : 5% 0;
     `
     const P2 = styled.p`
         position: relative;

@@ -110,7 +110,7 @@ const Footer = () => {
             </Sec>
             <HR />
             <Sec>
-                <p>@2021 Travel Guide | All Right reseved </p>
+                <p>@{new Date().getFullYear()} Travel Guide | All Right reseved </p>
             </Sec>
         </Div>
      );

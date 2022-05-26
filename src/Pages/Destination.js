@@ -1,10 +1,14 @@
 import Cover from "../Component/Cover";
-import Gallery from "../Component/Gallery";
+import Destinations from "../Component/Destinations";
+import StroryIntro from "../Component/StoryIntro"
+import Testimonials from "../Component/userReview&Q&A";
 const Destination = (props) => {
     return ( 
         <div>
              <Cover Cover1text = {props.Covertext}/>
-             <Gallery/>
+             <StroryIntro/>
+             <Destinations />
+             <Testimonials/>
         </div>
      );
 }

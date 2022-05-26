@@ -2,7 +2,7 @@ import Cover from "../Component/Cover";
 import styled from "styled-components";
 import StroryIntro from "../Component/StoryIntro";
 import Specialication from "../Component/Specialication";
-import Destinations from "../Component/Destinations";
+import Gallery from "../Component/Gallery";
 import Testimonials from "../Component/userReview&Q&A";
 const Home = (props) => {
     const Div = styled.div`
@@ -16,7 +16,7 @@ const Home = (props) => {
             <Cover Cover1text = {props.Covertext}/>
             <StroryIntro/>
             <Specialication/>
-            <Destinations/>
+            <Gallery/>
             <Testimonials/>
         </Div>
         
