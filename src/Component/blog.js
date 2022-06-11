@@ -77,7 +77,7 @@ return (
                 {
                     blogs.map(blog=>{
                         return(
-                            <BlogContainer>
+                            <BlogContainer data-aos="fade-up"  data-aos-duration="2000">
                                 <ImageContainer><BlogImage src={blog.img}/></ImageContainer>
                                 <BlogDate>{blog.date}</BlogDate>
                                 <BlogHeader>{blog.heading}</BlogHeader>

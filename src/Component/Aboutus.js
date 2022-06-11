@@ -2,7 +2,20 @@ import img1 from "./Images/xintro.png.pagespeed.ic.wRAmcK6-ty.jpg";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faCheckDouble, faHiking, faSmile } from "@fortawesome/free-solid-svg-icons";
+import CountUp from 'react-countup';
+import { useState,useEffect } from "react";
 const AboutUsComponent = () => {
+    const[ScrollToTop,setScrollToTop] = useState(false);
+    useEffect(() => {
+        window.addEventListener("scroll",()=>{
+            if(window.pageYOffset >= 1500){
+                setScrollToTop(true);
+            }
+            else{
+                setScrollToTop(false)
+            }
+        })
+    }, []);
     const Container = styled.div`
         width: 100%;
         display: flex;
@@ -110,46 +123,47 @@ const AboutUsComponent = () => {
         text-align: justify;
         margin: 2% 0;
     `
+    
     return ( 
         <Container>
             <SubContainer>
-                <Sec>
+                <Sec data-aos="zoom-in-right" data-aos-duration="2500">
                     <ImageContainer><Image src={img1}/></ImageContainer>
                 </Sec>
                 <Sec>
-                    <AboutUsHeader>We Have The Best Tours</AboutUsHeader>
-                    <Desc>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor dolores quam libero consectetur eum incidunt esse, tempora fugit architecto obcaecati hic temporibus voluptates blanditiis ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, vitae suscipit. Provident, natus similique. Explicabo nam quia hic doloremque incidunt atque ab suscipit aspernatur fuga dicta modi sequi placeat, sunt facere consequatur corporis, harum sed esse odio ipsum? Ab nesciunt ad, similique explicabo voluptate alias.</Desc>
-                    <Button>Explore Now</Button>
+                    <AboutUsHeader data-aos="fade-left" data-aos-duration="500">We Have The Best Tours</AboutUsHeader>
+                    <Desc data-aos="fade-left" data-aos-duration="1000">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor dolores quam libero consectetur eum incidunt esse, tempora fugit architecto obcaecati hic temporibus voluptates blanditiis ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, vitae suscipit. Provident, natus similique. Explicabo nam quia hic doloremque incidunt atque ab suscipit aspernatur fuga dicta modi sequi placeat, sunt facere consequatur corporis, harum sed esse odio ipsum? Ab nesciunt ad, similique explicabo voluptate alias.</Desc>
+                    <Button data-aos="fade-left" data-aos-duration="1500">Explore Now</Button>
                 </Sec>
             </SubContainer>
             <SubContainer1>
                 <Sec1>
                     <Icon><FontAwesomeIcon icon={faCheckDouble}/></Icon>
                     <Text>Tour has done successfully</Text>
-                    <Count>156</Count>
+                    <div>{ScrollToTop && <Count><CountUp end={4560} duration={1}/></Count>}</div>
                     
                 </Sec1>
                 <Sec1>
                     <Icon><FontAwesomeIcon icon={faSmile}/></Icon>
                     <Text>Positive Feedback</Text>
-                    <Count>4566</Count>
+                    <div>{ScrollToTop && <Count><CountUp end={456} duration={1}/></Count>}</div>
                     
                 </Sec1>
                 <Sec1>
                     <Icon><FontAwesomeIcon icon={faHiking}/></Icon>
                     <Text>Yearly tour arrange</Text>
-                    <Count>125</Count>
+                    <div>{ScrollToTop && <Count><CountUp end={120} duration={1}/></Count>}</div>
                     
                 </Sec1>
             </SubContainer1>
             <SubContainer2>
                 <Sec2>
-                    <Header>Our Mission</Header>
-                    <Text1>Lorem ipsum dolor sit  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates voluptatum corrupti illo, voluptas in culpa molestias repellendus? Ipsa sequi obcaecati non fugiat sapiente? Provident repellendus ratione dicta maiores, culpa fugit nemo magnam a, laboriosam sit facilis maxime, eum commodi explicabo.</Text1>
+                    <Header data-aos="zoom-in" data-aos-duration="1500">Our Mission</Header>
+                    <Text1 data-aos="fade-right" data-aos-duration="2000">Lorem ipsum dolor sit  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates voluptatum corrupti illo, voluptas in culpa molestias repellendus? Ipsa sequi obcaecati non fugiat sapiente? Provident repellendus ratione dicta maiores, culpa fugit nemo magnam a, laboriosam sit facilis maxime, eum commodi explicabo.</Text1>
                 </Sec2>
                 <Sec2>
-                    <Header>Our Vision</Header>
-                    <Text1>  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates voluptatum corrupti illo, voluptas in culpa molestias repellendus? Ipsa sequi obcaecati non fugiat sapiente? Provident repellendus ratione dicta maiores, culpa fugit nemo magnam a, laboriosam sit facilis maxime, eum commodi explicabo.</Text1>
+                    <Header data-aos="zoom-in" data-aos-duration="1500">Our Vision</Header>
+                    <Text1 data-aos="fade-right" data-aos-duration="2000">  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates voluptatum corrupti illo, voluptas in culpa molestias repellendus? Ipsa sequi obcaecati non fugiat sapiente? Provident repellendus ratione dicta maiores, culpa fugit nemo magnam a, laboriosam sit facilis maxime, eum commodi explicabo.</Text1>
                 </Sec2>
             </SubContainer2>
         </Container>

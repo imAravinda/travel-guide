@@ -48,14 +48,14 @@ const CoverContent = (props) => {
     `
     return ( 
             <Sec>
-                <Divsec>   
-                    <H1>{props.text.header}</H1>
+                <Divsec data-aos={"fade-right"}>   
+                    <H1 >{props.text.header}</H1>
                     <HR />
                 </Divsec>
-                <Divsec>
+                <Divsec data-aos={"fade-right"}>
                     <P>{props.text.desc}</P>
                 </Divsec>
-                <Divsec>
+                <Divsec data-aos={"fade-right"}>
                     <Button>Book Now</Button>
                 </Divsec>
             </Sec>

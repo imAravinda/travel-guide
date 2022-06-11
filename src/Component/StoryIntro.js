@@ -60,15 +60,15 @@ const StroryIntro = () => {
     `
     return ( 
         <Div>
-            <Sec>
+            <Sec data-aos="zoom-in">
                 <H1> This Is Our Story</H1>
             </Sec>
-            <Sec>
+            <Sec data-aos="fade-up">
                 <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Pariatur quidem provident suscipit soluta, maiores ut explicabo voluptatibus aliquid fuga quas consequatur aperiam quod animi. 
                     Odio consequatur accusamus et amet iste. Iste impedit dicta ex aperiam.</P>
             </Sec>
-            <Sec>
+            <Sec data-aos="fade-up">
                 <Button><Span></Span>Read More</Button>
             </Sec>
         </Div>

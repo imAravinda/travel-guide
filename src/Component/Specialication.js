@@ -52,10 +52,10 @@ const Specialication = () => {
     `
     return ( 
         <Div>
-            <Sec>
+            <Sec data-aos="zoom-in">
                 <H1>What Makes Us Special</H1>
             </Sec>
-            <Sec>
+            <Sec data-aos="zoom-up">
                 <MainSubSec>
                 <SubSec>
                     <Icon>
@@ -66,7 +66,7 @@ const Specialication = () => {
                         Vitae nesciunt incidunt non cupiditate optio ut aliquid harum, 
                         fugiat debitis repellendus?</P>
                 </SubSec>
-                <SubSec>
+                <SubSec data-aos="zoom-up">
                     <Icon>
                         <FontAwesomeIcon icon = {faHotel}/>
                     </Icon>
@@ -75,7 +75,7 @@ const Specialication = () => {
                         Vitae nesciunt incidunt non cupiditate optio ut aliquid harum, 
                         fugiat debitis repellendus?</P>
                 </SubSec>
-                <SubSec>
+                <SubSec data-aos="zoom-up">
                     <Icon>
                         <FontAwesomeIcon icon = {faGlobeAsia}/>
                     </Icon>

@@ -130,7 +130,7 @@ const Testimonials = () => {
     `
     return ( 
         <Div>
-            <SecLeft>
+            <SecLeft data-aos="fade-right">
                 <H1>Testimonials</H1>
                 <OwlCarousel options={options} id="review">
                     <Slider>
@@ -243,21 +243,21 @@ const Testimonials = () => {
                     </Slider>
                 </OwlCarousel>
             </SecLeft>
-            <SecRight>
-                <H1>Frequently Asked <br /> Questions</H1>
-                <Details>
+            <SecRight >
+                <H1 data-aos="zoom-in">Frequently Asked <br /> Questions</H1>
+                <Details data-aos="fade-left" data-aos-duration="500">
                     <P1>How Book a Trip ?</P1>
                     <P2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, numquam.</P2> 
                 </Details>
-                <Details>
+                <Details data-aos="fade-left" data-aos-duration="1500">
                     <P1>How Book a Trip ?</P1>
                     <P2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, numquam.</P2> 
                 </Details>
-                <Details>
+                <Details data-aos="fade-left" data-aos-duration="2000">
                     <P1>How Book a Trip ?</P1>
                     <P2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, numquam.</P2> 
                 </Details>
-                <Details>
+                <Details data-aos="fade-left" data-aos-duration="2500">
                     <P1>How Book a Trip ?</P1>
                     <P2>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, numquam.</P2> 
                 </Details>

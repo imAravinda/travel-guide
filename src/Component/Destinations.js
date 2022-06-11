@@ -132,7 +132,7 @@ const Destinations = () => {
                     {
                         Destination.map(destination => {
                             return(
-                                <Slider className="slider">
+                                <Slider className="slider"data-aos="flip-right" data-aos-duration="2000" >
                                     <div>
                                         <Img src={destination.img} alt="" />
                                     </div>

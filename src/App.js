@@ -10,12 +10,18 @@ import content from './Data/Content';
 import Destination from './Pages/Destination';
 import Blog from './Pages/Blog';
 import AboutUs from './Pages/AboutUs';
+import Aos from "aos";
+import { useEffect } from "react";
+import "aos/dist/aos.css";
 function App() {
   const GlobalStyle = createGlobalStyle `
     body{
       font-family: 'PT Sans', sans-serif;
     }
   `
+  useEffect(() => {
+    Aos.init({duration:1000}); 
+  }, [])
   // console.log(content);
   return (
     <Router>
