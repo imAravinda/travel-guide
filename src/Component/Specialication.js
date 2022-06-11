@@ -1,7 +1,6 @@
 import { faGlobeAsia, faHotel, faTrain } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
-import Bgimg from "./Images/max-vertsanov-Sr5sVt9UG4Q-unsplash.jpg";
 const Specialication = () => {
     const Div = styled.div`
         display: flex;

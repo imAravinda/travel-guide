@@ -1,13 +1,14 @@
 import Cover from "../Component/Cover";
 import StroryIntro from "../Component/StoryIntro";
-
-const Blog = (props) => {
+import BlogsComponent from "../Component/blog";
+const Blogs = (props) => {
     return ( 
         <div>
             <Cover Cover1text = {props.Covertext}/>
             <StroryIntro/>
+            <BlogsComponent/>
         </div>
      );
 }
  
-export default Blog;
+export default Blogs;
