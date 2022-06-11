@@ -6,19 +6,9 @@ const Container = styled.div`
   width: 100%;
   height: 100%;
   cursor: pointer;
+  margin-top: 5%;
 `
-const Header = styled.h1`
-  text-align: center;
-  font-size: 40px;
-  color: #0e0900;
-  font-variant: small-caps;
-  font-weight: bold;
-  position: relative;
-  left: 0;
-  margin-bottom: 40px;
-  border-bottom: 3px solid #FFA000;
-  display: inline;
-`
+
 const Sec = styled.div`
     width: 100%;
     margin-bottom : 5%;
@@ -82,7 +72,7 @@ const BlogMore = styled.button`
 `
 return ( 
         <Container>
-            <Header>Blogs</Header>
+           
             <Sec>
                 {
                     blogs.map(blog=>{

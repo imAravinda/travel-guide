@@ -9,6 +9,7 @@ import ScrollToTop from './Hooks/ScrollToTop';
 import content from './Data/Content';
 import Destination from './Pages/Destination';
 import Blog from './Pages/Blog';
+import AboutUs from './Pages/AboutUs';
 function App() {
   const GlobalStyle = createGlobalStyle `
     body{
@@ -36,6 +37,11 @@ function App() {
             <Route exact path="/blog">
               <div>
                 <Blog Covertext={content[2]}/>
+              </div>
+            </Route>
+            <Route>
+              <div>
+                <AboutUs Covertext={content[3]}/>
               </div>
             </Route>
           </Switch>

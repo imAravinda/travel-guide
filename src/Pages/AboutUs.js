@@ -1,16 +1,17 @@
+import AboutUsComponent from "../Component/Aboutus";
 import Cover from "../Component/Cover";
 import StroryIntro from "../Component/StoryIntro";
-import BlogsComponent from "../Component/blog";
 // import Testimonials from "../Component/userReview&Q&A";
-const Blogs = (props) => {
+
+const AboutUs = (props) => {
     return ( 
-        <div>
+        <>
             <Cover Cover1text = {props.Covertext}/>
             <StroryIntro/>
-            <BlogsComponent/>
+            <AboutUsComponent/>
             {/* <Testimonials/> */}
-        </div>
+        </>
      );
 }
  
-export default Blogs;
+export default AboutUs;
