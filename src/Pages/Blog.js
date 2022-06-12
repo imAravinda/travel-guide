@@ -1,6 +1,6 @@
-import Cover from "../Component/Cover";
-import StroryIntro from "../Component/StoryIntro";
-import BlogsComponent from "../Component/blog";
+import Cover from "../Component/Cover/Cover";
+import StroryIntro from "../Component/StoryIntro/StoryIntro";
+import BlogsComponent from "../Component/blog/blog";
 // import Testimonials from "../Component/userReview&Q&A";
 const Blogs = (props) => {
     return ( 

@@ -1,10 +1,10 @@
 
 import './App.css';
-import Navbar from './Component/Navbar';
+import Navbar from './Component/Navbar/Navbar';
 import Home from './Pages/Home';
 import { BrowserRouter as Router,Route,Switch } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
-import Footer from './Component/footer';
+import Footer from './Component/Footer/footer';
 import ScrollToTop from './Hooks/ScrollToTop';
 import content from './Data/Content';
 import Destination from './Pages/Destination';

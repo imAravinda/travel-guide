@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Images } from '../Data/Content';
+import { Images } from '../../Data/Content';
 
 const Container = styled.div`
   padding: 5%;

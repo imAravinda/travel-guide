@@ -1,14 +1,14 @@
 import 'react-owl-carousel2/lib/styles.css';
 import 'react-owl-carousel2/src/owl.theme.default.css';
-import img1 from "./Images/IMG_3573.JPG";
-import img2 from "./Images/daniele-franchi-S9LN3vb47gw-unsplash.jpg";
-import img3 from "./Images/Araugambay.jpg"
-import img4 from "./Images/Adams_Peack.jpg"
-import img5 from "./Images/DunsinaneFall.jpg"
-import img6 from "./Images/Ellarock.jfif"
-import img7 from "./Images/Hikkaduwa.jpg"
-import img8 from "./Images/Knuckels.jpg"
-import img9 from "./Images/OldDutchFort.jpg"
+import img1 from "../Images/Destinations/IMG_3573.JPG";
+import img2 from "../Images/Destinations/daniele-franchi-S9LN3vb47gw-unsplash.jpg";
+import img3 from "../Images/Destinations/Araugambay.jpg"
+import img4 from "../Images/Destinations/Adams_Peack.jpg"
+import img5 from "../Images/Destinations/DunsinaneFall.jpg"
+import img6 from "../Images/Destinations/Ellarock.jfif"
+import img7 from "../Images/Destinations/Hikkaduwa.jpg"
+import img8 from "../Images/Destinations/Knuckels.jpg"
+import img9 from "../Images/Destinations/OldDutchFort.jpg"
 import styled from 'styled-components';
 const Destinations = () => {
     const Des = styled.div`

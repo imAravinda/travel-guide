@@ -1,9 +1,9 @@
-import Cover from "../Component/Cover";
+import Cover from "../Component/Cover/Cover";
 import styled from "styled-components";
-import StroryIntro from "../Component/StoryIntro";
-import Specialication from "../Component/Specialication";
-import Gallery from "../Component/Gallery";
-import Testimonials from "../Component/userReview&Q&A";
+import StroryIntro from "../Component/StoryIntro/StoryIntro";
+import Specialication from "../Component/Specialication/Specialication";
+import Gallery from "../Component/Gallery/Gallery";
+import Testimonials from "../Component/UserReviews/userReview&Q&A";
 const Home = (props) => {
     const Div = styled.div`
         z-index:1;

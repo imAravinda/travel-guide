@@ -1,4 +1,4 @@
-import img1 from "./Images/xintro.png.pagespeed.ic.wRAmcK6-ty.jpg";
+import img1 from "../Images/xintro.png.pagespeed.ic.wRAmcK6-ty.jpg";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faCheckDouble, faHiking, faSmile } from "@fortawesome/free-solid-svg-icons";
@@ -8,7 +8,7 @@ const AboutUsComponent = () => {
     const[ScrollToTop,setScrollToTop] = useState(false);
     useEffect(() => {
         window.addEventListener("scroll",()=>{
-            if(window.pageYOffset >= 1500){
+            if(window.pageYOffset >= 1200){
                 setScrollToTop(true);
             }
             else{
@@ -127,8 +127,8 @@ const AboutUsComponent = () => {
     return ( 
         <Container>
             <SubContainer>
-                <Sec data-aos="zoom-in-right" data-aos-duration="2500">
-                    <ImageContainer><Image src={img1}/></ImageContainer>
+                <Sec >
+                    <ImageContainer data-aos="zoom-in-right"><Image src={img1}/></ImageContainer>
                 </Sec>
                 <Sec>
                     <AboutUsHeader data-aos="fade-left" data-aos-duration="500">We Have The Best Tours</AboutUsHeader>

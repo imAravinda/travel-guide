@@ -4,10 +4,10 @@ import 'react-owl-carousel2/src/owl.theme.default.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import styled from 'styled-components';
-import img1 from "./Images/user1.jpg";
-import img2 from "./Images/user2.jpg";
-import img3 from "./Images/user3.jpg"
-import img4 from "./Images/user4.jpg"
+import img1 from "../Images/Testimonials/user1.jpg";
+import img2 from "../Images/Testimonials/user2.jpg";
+import img3 from "../Images/Testimonials/user3.jpg"
+import img4 from "../Images/Testimonials/user4.jpg"
 const Testimonials = () => {
 
     const options = {

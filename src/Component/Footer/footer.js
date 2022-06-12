@@ -1,4 +1,4 @@
-import img from "./Images/Logo-removebg-preview.png";
+import img from "../Images/Logo-removebg-preview.png"
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";

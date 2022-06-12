@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import img from "./Images/Logo-removebg-preview.png";
+import img from "../Images/Logo-removebg-preview.png";
 import { Link } from "react-router-dom";
 const Navbar = (props) => {
     const Navbar=styled.div`

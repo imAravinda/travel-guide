@@ -1,6 +1,6 @@
-import AboutUsComponent from "../Component/Aboutus";
-import Cover from "../Component/Cover";
-import StroryIntro from "../Component/StoryIntro";
+import AboutUsComponent from "../Component/AboutUs/Aboutus";
+import Cover from "../Component/Cover/Cover";
+import StroryIntro from "../Component/StoryIntro/StoryIntro";
 // import Testimonials from "../Component/userReview&Q&A";
 
 const AboutUs = (props) => {

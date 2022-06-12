@@ -1,4 +1,4 @@
-import { blogs } from '../Data/Content';
+import { blogs } from '../../Data/Content';
 import styled from 'styled-components';
 const BlogsComponent = () => {
     
@@ -77,7 +77,7 @@ return (
                 {
                     blogs.map(blog=>{
                         return(
-                            <BlogContainer data-aos="fade-up"  data-aos-duration="2000">
+                            <BlogContainer data-aos="fade-up" >
                                 <ImageContainer><BlogImage src={blog.img}/></ImageContainer>
                                 <BlogDate>{blog.date}</BlogDate>
                                 <BlogHeader>{blog.heading}</BlogHeader>
