@@ -57,10 +57,10 @@ const Cover = (props) => {
     return ( 
         <Before>
             <OwlCarousel options={options} >
-                <Slider><IMG src={img1} alt="" /></Slider>
                 <Slider><IMG src={img2} alt="" /></Slider>
                 <Slider><IMG src={img3} alt="" /></Slider>
                 <Slider><IMG src={img4} alt="" /></Slider>
+                <Slider><IMG src={img1} alt="" /></Slider>
             </OwlCarousel>
             <CoverContent text={props.Cover1text}/>
         </Before>

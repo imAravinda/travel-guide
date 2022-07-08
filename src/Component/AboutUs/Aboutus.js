@@ -8,7 +8,8 @@ const AboutUsComponent = () => {
     const[ScrollToTop,setScrollToTop] = useState(false);
     useEffect(() => {
         window.addEventListener("scroll",()=>{
-            if(window.pageYOffset >= 1200){
+            console.log(window.pageYOffset);
+            if(window.pageYOffset >= 400){
                 setScrollToTop(true);
             }
             else{
@@ -126,16 +127,6 @@ const AboutUsComponent = () => {
     
     return ( 
         <Container>
-            <SubContainer>
-                <Sec >
-                    <ImageContainer data-aos="zoom-in-right"><Image src={img1}/></ImageContainer>
-                </Sec>
-                <Sec>
-                    <AboutUsHeader data-aos="fade-left" data-aos-duration="500">We Have The Best Tours</AboutUsHeader>
-                    <Desc data-aos="fade-left" data-aos-duration="1000">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor dolores quam libero consectetur eum incidunt esse, tempora fugit architecto obcaecati hic temporibus voluptates blanditiis ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, vitae suscipit. Provident, natus similique. Explicabo nam quia hic doloremque incidunt atque ab suscipit aspernatur fuga dicta modi sequi placeat, sunt facere consequatur corporis, harum sed esse odio ipsum? Ab nesciunt ad, similique explicabo voluptate alias.</Desc>
-                    <Button data-aos="fade-left" data-aos-duration="1500">Explore Now</Button>
-                </Sec>
-            </SubContainer>
             <SubContainer1>
                 <Sec1>
                     <Icon><FontAwesomeIcon icon={faCheckDouble}/></Icon>
@@ -156,6 +147,16 @@ const AboutUsComponent = () => {
                     
                 </Sec1>
             </SubContainer1>
+            <SubContainer>
+                <Sec >
+                    <ImageContainer data-aos="zoom-in-right"><Image src={img1}/></ImageContainer>
+                </Sec>
+                <Sec>
+                    <AboutUsHeader data-aos="fade-left" data-aos-duration="500">We Have The Best Tours</AboutUsHeader>
+                    <Desc data-aos="fade-left" data-aos-duration="1000">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor dolores quam libero consectetur eum incidunt esse, tempora fugit architecto obcaecati hic temporibus voluptates blanditiis ex. Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, vitae suscipit. Provident, natus similique. Explicabo nam quia hic doloremque incidunt atque ab suscipit aspernatur fuga dicta modi sequi placeat, sunt facere consequatur corporis, harum sed esse odio ipsum? Ab nesciunt ad, similique explicabo voluptate alias.</Desc>
+                    <Button data-aos="fade-left" data-aos-duration="1500">Explore Now</Button>
+                </Sec>
+            </SubContainer>
             <SubContainer2>
                 <Sec2>
                     <Header data-aos="zoom-in" data-aos-duration="1500">Our Mission</Header>
