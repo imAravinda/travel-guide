@@ -48,7 +48,7 @@ const AboutUsComponent = () => {
     `
     const Desc = styled.div`
         text-align: justify;
-        font-size: 18px;
+        
     `
     const Button = styled.button`
         &{
@@ -120,7 +120,6 @@ const AboutUsComponent = () => {
         display: inline;
     `
     const Text1 = styled.div`
-        font-size: 20px;
         text-align: justify;
         margin: 2% 0;
     `

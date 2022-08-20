@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import img from "../Images/Logo-removebg-preview.png";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 const Navbar = (props) => {
     const Navbar=styled.div`
         display: block;
@@ -8,10 +9,20 @@ const Navbar = (props) => {
     `
     const Nav=styled.nav`
         display: flex;
-        position: absolute;
+        position: fixed;
         justify-content: space-between;
         background:transparent;
-        height: 80px;
+        height: 100px;
+        width: 100%;
+        z-index: 2;
+    `
+    const NavActive = styled.div`
+        display: flex;
+        position: fixed;
+        justify-content: space-between;
+        background:linear-gradient(#212121,#424242ee);
+        color:  #FFF8E1;
+        height: 100px;
         width: 100%;
         z-index: 2;
     `
@@ -46,7 +57,6 @@ const Navbar = (props) => {
         width: 150px;
         height: 150px;
         position: absolute;
-        padding-top:10px ;
     `
     const Span = styled.span`
     &{
@@ -71,22 +81,51 @@ const Navbar = (props) => {
             })
         }
     }
+    const [navbar,setNavbar] = useState(false);
+
+    const changeBackground = ()=>{
+        if(window.scrollY >= 100){
+            setNavbar(true);
+        }else{
+            setNavbar(false);
+        }
+    }
+
+    window.addEventListener('scroll',changeBackground);
     return ( 
-        <Navbar >
-            <Nav>
-                <Links>
-                    <Logo src={img} alt="" /> 
-                </Links>
-                <Links>
-                    <Ul>
-                        <Li className="li" onClick={ScrollToTop}><Link to="/">Home<Span className="Ho"></Span></Link></Li>
-                        <Li className="li" onClick={ScrollToTop}><Link to="./destination">Destinations<Span className="Ho"></Span></Link></Li>
-                        <Li className="li" onClick={ScrollToTop}><Link to="./blog">Blogs<Span className="Ho"></Span></Link></Li>
-                        <Li className="li" onClick={ScrollToTop}><Link to=" ">About Us<Span className="Ho"></Span></Link></Li>
-                        {/* <Li className="li" onClick={ScrollToTop}><Link to=" ">Contact Us<Span className="Ho"></Span></Link></Li> */}
-                    </Ul>
-                </Links>
-            </Nav>
+        <Navbar>
+            {
+                navbar ? 
+                <NavActive>
+                    <Links>
+                        <Logo src={img} alt="" /> 
+                    </Links>
+                    <Links>
+                        <Ul>
+                            <Li className="li" onClick={ScrollToTop}><Link to="/">Home<Span className="Ho"></Span></Link></Li>
+                            <Li className="li" onClick={ScrollToTop}><Link to="./destination">Destinations<Span className="Ho"></Span></Link></Li>
+                            <Li className="li" onClick={ScrollToTop}><Link to="./blog">Blogs<Span className="Ho"></Span></Link></Li>
+                            <Li className="li" onClick={ScrollToTop}><Link to=" ">About Us<Span className="Ho"></Span></Link></Li>
+                            {/* <Li className="li" onClick={ScrollToTop}><Link to=" ">Contact Us<Span className="Ho"></Span></Link></Li> */}
+                        </Ul>
+                    </Links>
+                </NavActive>
+                :
+                <Nav>
+                    <Links>
+                        <Logo src={img} alt="" /> 
+                    </Links>
+                    <Links>
+                        <Ul>
+                            <Li className="li" onClick={ScrollToTop}><Link to="/">Home<Span className="Ho"></Span></Link></Li>
+                            <Li className="li" onClick={ScrollToTop}><Link to="./destination">Destinations<Span className="Ho"></Span></Link></Li>
+                            <Li className="li" onClick={ScrollToTop}><Link to="./blog">Blogs<Span className="Ho"></Span></Link></Li>
+                            <Li className="li" onClick={ScrollToTop}><Link to=" ">About Us<Span className="Ho"></Span></Link></Li>
+                            {/* <Li className="li" onClick={ScrollToTop}><Link to=" ">Contact Us<Span className="Ho"></Span></Link></Li> */}
+                        </Ul>
+                    </Links>
+                </Nav>
+            }
         </Navbar>
      );
 }
