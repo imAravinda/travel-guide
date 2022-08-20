@@ -14,7 +14,7 @@ const Navbar = (props) => {
         background:transparent;
         height: 100px;
         width: 100%;
-        z-index: 2;
+        z-index: 9999;
     `
     const NavActive = styled.div`
         display: flex;
@@ -24,7 +24,7 @@ const Navbar = (props) => {
         color:  #FFF8E1;
         height: 100px;
         width: 100%;
-        z-index: 2;
+        z-index: 9999;
     `
     const Links = styled.div`
         margin: 10px 5px;
