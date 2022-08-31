@@ -35,7 +35,9 @@ function App() {
     <div className='App'>
         {
           loading ?
-          <BeatLoader loading={loading} color={'#FFA000'} className="spinner"/>
+          <div className="spinner">
+            <BeatLoader loading={loading} color={'#FFA000'}  speedMultiplier={0.5} size={20}/>
+          </div>
                   :
                   <Router>
                   <div className="App">
