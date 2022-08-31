@@ -13,6 +13,7 @@ import AboutUs from './Pages/AboutUs';
 import Aos from "aos";
 import { useEffect, useState } from "react";
 import "aos/dist/aos.css";
+import { BeatLoader } from 'react-spinners';
 function App() {
   const GlobalStyle = createGlobalStyle `
     body{
