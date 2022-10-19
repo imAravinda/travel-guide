@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const CoverContent = (props) => {
@@ -32,7 +33,7 @@ const CoverContent = (props) => {
     `
     const Button = styled.button`
     &{
-        width: 85px;
+        width: 150px;
         height: 40px;
         color:#fff;
         background: #FFA000;
@@ -41,6 +42,7 @@ const CoverContent = (props) => {
         cursor: pointer;
         position: relative;
         right: 1.5%;
+        border-radius: 20px;
     }
     &:active{
         transform: scale(0.95);
@@ -56,7 +58,7 @@ const CoverContent = (props) => {
                     <P>{props.text.desc}</P>
                 </Divsec>
                 <Divsec data-aos={"fade-right"}>
-                    <Button>Book Now</Button>
+                    <Button><Link className = "li" to="/Login">Book Now</Link></Button>
                 </Divsec>
             </Sec>
      );

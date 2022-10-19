@@ -14,6 +14,7 @@ import Aos from "aos";
 import { useEffect, useState } from "react";
 import "aos/dist/aos.css";
 import { BeatLoader } from 'react-spinners';
+import Login from './Component/Login/Login';
 function App() {
   const GlobalStyle = createGlobalStyle `
     body{
@@ -42,31 +43,39 @@ function App() {
                   <Router>
                   <div className="App">
                   <GlobalStyle/>
-                  <Navbar/>
                   <ScrollToTop/> 
                       <Switch>
-                        <Route exact path="/">
+                        <Route exact path="/Login">
+                            <div>
+                              <Login/>
+                            </div>
+                          </Route>
                           <div>
-                            <Home Covertext={content[0]}/>
-                          </div>
-                        </Route>
-                        <Route exact path="/destination">
-                          <div>
-                            <Destination Covertext={content[1]}/>
-                          </div>
-                        </Route>
-                        <Route exact path="/blog">
-                          <div>
-                            <Blog Covertext={content[2]}/>
-                          </div>
-                        </Route>
-                        <Route>
-                          <div>
-                            <AboutUs Covertext={content[3]}/>
-                          </div>
-                        </Route>
+                          <Navbar/>
+                          <Route exact path="/">
+                            <div>
+                              <Home Covertext={content[0]}/>
+                            </div>
+                          </Route>
+                          
+                          <Route exact path="/destination">
+                            <div>
+                              <Destination Covertext={content[1]}/>
+                            </div>
+                          </Route>
+                          <Route exact path="/blog">
+                            <div>
+                              <Blog Covertext={content[2]}/>
+                            </div>
+                          </Route>
+                          <Route exact path="/aboutUs">
+                            <div>
+                              <AboutUs Covertext={content[3]}/>
+                            </div>
+                          </Route>
+                          <Footer/>
+                        </div>
                       </Switch>
-                      <Footer/>
                   </div>
                 </Router>
          }

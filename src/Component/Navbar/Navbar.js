@@ -25,6 +25,7 @@ const Navbar = (props) => {
         height: 100px;
         width: 100%;
         z-index: 9999;
+        transition: all 0.5s ease;
     `
     const Links = styled.div`
         margin: 10px 5px;
@@ -92,11 +93,12 @@ const Navbar = (props) => {
     }
 
     window.addEventListener('scroll',changeBackground);
+    
     return ( 
         <Navbar>
             {
                 navbar ? 
-                <NavActive>
+                <NavActive data-aos={"fade-down"}>
                     <Links>
                         <Logo src={img} alt="" /> 
                     </Links>
@@ -105,7 +107,7 @@ const Navbar = (props) => {
                             <Li className="li" onClick={ScrollToTop}><Link to="/">Home<Span className="Ho"></Span></Link></Li>
                             <Li className="li" onClick={ScrollToTop}><Link to="./destination">Destinations<Span className="Ho"></Span></Link></Li>
                             <Li className="li" onClick={ScrollToTop}><Link to="./blog">Blogs<Span className="Ho"></Span></Link></Li>
-                            <Li className="li" onClick={ScrollToTop}><Link to=" ">About Us<Span className="Ho"></Span></Link></Li>
+                            <Li className="li" onClick={ScrollToTop}><Link to="./aboutUs">About Us<Span className="Ho"></Span></Link></Li>
                             {/* <Li className="li" onClick={ScrollToTop}><Link to=" ">Contact Us<Span className="Ho"></Span></Link></Li> */}
                         </Ul>
                     </Links>
@@ -120,7 +122,7 @@ const Navbar = (props) => {
                             <Li className="li" onClick={ScrollToTop}><Link to="/">Home<Span className="Ho"></Span></Link></Li>
                             <Li className="li" onClick={ScrollToTop}><Link to="./destination">Destinations<Span className="Ho"></Span></Link></Li>
                             <Li className="li" onClick={ScrollToTop}><Link to="./blog">Blogs<Span className="Ho"></Span></Link></Li>
-                            <Li className="li" onClick={ScrollToTop}><Link to=" ">About Us<Span className="Ho"></Span></Link></Li>
+                            <Li className="li" onClick={ScrollToTop}><Link to="./aboutUs">About Us<Span className="Ho"></Span></Link></Li>
                             {/* <Li className="li" onClick={ScrollToTop}><Link to=" ">Contact Us<Span className="Ho"></Span></Link></Li> */}
                         </Ul>
                     </Links>

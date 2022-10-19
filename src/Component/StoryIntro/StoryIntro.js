@@ -24,8 +24,9 @@ const StroryIntro = () => {
     `
     const Button = styled.button`
     &{
-        width: 100px;
+        width: 150px;
         height: 45px;
+        border-radius: 20px;
         color: #0e0900;
         background-color: transparent;
         transition: color 0.3s;
@@ -45,6 +46,7 @@ const StroryIntro = () => {
     const Span = styled.span`
         width: 0;
         height: 100%;
+        border-radius: 20px;
         position: absolute;
         background: #FFA000;
         opacity: 1;
