@@ -21,26 +21,14 @@ function App() {
       font-family: 'PT Sans', sans-serif;
     }
   `
-  const[loading,setLoading] = useState(false);
-  useEffect(()=>{
-    setLoading(true);
-    setTimeout(()=>{
-      setLoading(false)
-    },2000);
-  },[]);
+ 
   useEffect(() => {
     Aos.init({duration:500}); 
   }, [])
   // console.log(content);
   return (
     <div className='App'>
-        {
-          loading ?
-          <div className="spinner">
-            <BeatLoader loading={loading} color={'#FFA000'}  speedMultiplier={0.5} size={20}/>
-          </div>
-                  :
-                  <Router>
+        <Router>
                   <div className="App">
                   <GlobalStyle/>
                   <ScrollToTop/> 
@@ -78,7 +66,6 @@ function App() {
                       </Switch>
                   </div>
                 </Router>
-         }
     </div>
   );
 }

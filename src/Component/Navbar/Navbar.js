@@ -20,7 +20,7 @@ const Navbar = (props) => {
         display: flex;
         position: fixed;
         justify-content: space-between;
-        background:linear-gradient(#212121,#424242ee);
+        background:#212121;
         color:  #FFF8E1;
         height: 100px;
         width: 100%;
