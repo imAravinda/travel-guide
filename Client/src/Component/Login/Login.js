@@ -11,12 +11,19 @@ const Login = () => {
         height: auto;
         margin: 5%;
         border-radius: 20px;
+        @media screen and (max-width:800px){
+            flex-direction: column;
+            width: 90%;
+            justify-content: center;
+            align-items: center;
+        }
     `
     const LoginPageContainer = styled.div`
         display: flex;
         justify-content: center;
         height: 100vh;
         background-image: linear-gradient(to top left, #FFA000 50%, #212121 50%);
+        
     `
 
     const ImageSection = styled.div`
@@ -40,6 +47,13 @@ const Login = () => {
             background-color: #4242426d;
             border-top-left-radius: 20px;
             border-bottom-left-radius: 20px;
+            @media screen and (max-width:800px){
+                border-bottom-left-radius: 0px;
+                border-top-right-radius: 20px;
+            }
+        }
+        @media screen and (max-width:800px){
+            width: 100%;
         }
     `
     const LoginSection = styled.div`
@@ -51,6 +65,13 @@ const Login = () => {
         justify-content: center;
         display: flex;
         flex-direction: column;
+        @media screen and (max-width:800px){
+            width: 90%;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 20px;
+            padding: 0 5%;
+            height: 350px;
+        }
     `
     const SignUpSection = styled.div`
         background-color: #21212a;
@@ -61,18 +82,30 @@ const Login = () => {
         justify-content: center;
         display: flex;
         flex-direction: column;
+        @media screen and (max-width:800px){
+            width: 90%;
+            border-top-right-radius: 0px;
+            border-bottom-left-radius: 20px;
+            padding: 0 5%;
+            height: 350px;
+        }
     `
     const Heading = styled.div`
         color: #fff;
         font-size:35px;
         letter-spacing: 0.8rem;
+        @media screen and (max-width:800px){
+            font-size: 20px;
+        }
     `
     const SocialMediaIcons = styled.div`
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 3%;
-        
+        @media screen and (max-width:800px){
+            margin: 2% 3%;
+        }
     `
     const Icon = styled.div`
         &{  margin: 0 3%;
@@ -97,13 +130,21 @@ const Login = () => {
             90% { transform: translate(1px, 2px) rotate(0deg) scale(1.5); }
             100% { transform: translate(1px, -2px) rotate(-1deg) scale(1.5); }
         }
+        @media screen and (max-width:800px){
+            font-size: 15px;
+        }
     `
     const TextSection = styled.div`
         margin: 3%;
+        @media screen and (max-width:800px){
+            margin: 0 2%;
+        }
     `
     const InputField = styled.div`
         margin: 5%;
-        
+        @media screen and (max-width:800px){
+            margin: 3%;
+        }
     `
     const Input = styled.input`
         height: 40px;
@@ -111,12 +152,22 @@ const Login = () => {
         padding: 0 3%;
         border-radius: 20px;
         border: none;
+        @media screen and (max-width:800px){
+            width: 200px;
+            height: 30px;
+            font-size: 12px;
+        }
     `
     const Img = styled.img`
         width: 100%;
         height: 100%;
         border-top-left-radius: 20px;
         border-bottom-left-radius: 20px;
+        @media screen and (max-width:800px){
+            height: 250px;
+            border-bottom-left-radius: 0px;
+            border-top-right-radius: 20px;
+        }
     `
     const FrogotPWD = styled.div`
         &{  text-align: right;
@@ -128,11 +179,19 @@ const Login = () => {
         &:hover{
             cursor: pointer;
         }
+        @media screen and (max-width:800px){
+            font-size: 12px;
+            top: 0;
+            right: 15%;
+        }
 
     `
     const Option = styled.div`
         color: #fff;
         margin: 2%;
+        @media screen and (max-width:800px){
+            font-size: 12px;
+        }
     `
     const SignUpandLoginLink =styled.a`
         &:hover{
@@ -149,11 +208,14 @@ const Login = () => {
         justify-content: center;
         align-items: center;
         margin: 2%;
-        
+        @media screen and (max-width:800px){
+            margin : 0%;
+        }
     }
     &:active{
         transform: scale(0.95);
     }
+    
     `
     const Button = styled.div`
         width: 150px;
@@ -164,6 +226,11 @@ const Login = () => {
         align-items: center;
         background: #FFA000;
         color: #fff;
+        @media screen and (max-width:800px){
+            height: 30px;
+            font-size: 12px;
+            width: 100px;
+        }
     `
 
     const[change,setChange] = useState(false);

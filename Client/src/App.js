@@ -27,15 +27,18 @@ function App() {
     Aos.init({duration:500}); 
   }, [])
   // console.log(content);
-  const[view,setView] = useState(false);
+  const[view,setView] = useState(window.innerWidth >= 800 ? true : false);
+  useEffect(()=>{
     const resize = ()=>{
-        if(window.innerWidth >= 800){
-            setView(true);
-        }else{
-            setView(false);
-        }
+      if(window.innerWidth >= 800){
+          setView(true);
+      }else{
+          setView(false);
+      }
     }
     window.addEventListener('resize',resize);
+  })
+    
   return (
     <div className='App'>
         <Router>
@@ -54,7 +57,7 @@ function App() {
                             }
                           <Route exact path="/">
                             <div>
-                              <Home Covertext={content[0]}/>
+                              <Home Covertext={content[0]} view1={view}/>
                             </div>
                           </Route>
                           

@@ -11,7 +11,7 @@
     width: 100%;
 }
 #review{
-    width: 100%;
+    width: 80%;
     display:flex;
     flex-wrap: wrap;
 }
@@ -78,7 +78,4 @@ Button:hover Span{
     text-decoration: none;
     color: #fff;
     font-weight: bold;
-}
-.sc-cKRKFl hYcCnD{
-    width: 100%;
 }

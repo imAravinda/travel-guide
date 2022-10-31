@@ -8,6 +8,10 @@ import img1 from "../Images/Cover/jess-snoek-rDud6SN-ZVo-unsplash.jpg"
 import img2 from "../Images/Cover/recal-media-ueBIGLmiI5A-unsplash.jpg";
 import img3 from "../Images/Cover/oleg-illarionov-q9q8bi0Aw7o-unsplash.jpg";
 import img4 from "../Images/Cover/vitalii-tkachenko-lQ9lHXL73e8-unsplash.jpg";
+import Mobimg1 from "../Images/Cover/jess-snoek-rDud6SN-ZVo-unsplash_MOBILE.jpg"
+import Mobimg2 from "../Images/Cover/recal-media-ueBIGLmiI5A-unsplash_MOBILE.jpg";
+import Mobimg3 from "../Images/Cover/oleg-illarionov-q9q8bi0Aw7o-unsplash_MOBILE.jpg";
+import Mobimg4 from "../Images/Cover/vitalii-tkachenko-lQ9lHXL73e8-unsplash_MOBILE.jpg";
 import CoverContent from "./CoverContent"
 const Cover = (props) => {
     const options = {
@@ -57,10 +61,10 @@ const Cover = (props) => {
     return ( 
         <Before>
             <OwlCarousel options={options} >
-                <Slider><IMG src={img2} alt="" /></Slider>
-                <Slider><IMG src={img3} alt="" /></Slider>
-                <Slider><IMG src={img4} alt="" /></Slider>
-                <Slider><IMG src={img1} alt="" /></Slider>
+                <Slider><IMG src={props.view2 ? img2 : Mobimg1} alt="" /></Slider>
+                <Slider><IMG src={props.view2 ? img3 : Mobimg2} alt="" /></Slider>
+                <Slider><IMG src={props.view2 ? img4 : Mobimg3} alt="" /></Slider>
+                <Slider><IMG src={props.view2 ? img1 : Mobimg4} alt="" /></Slider>
             </OwlCarousel>
             <CoverContent text={props.Cover1text}/>
         </Before>
