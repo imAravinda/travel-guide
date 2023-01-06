@@ -21,7 +21,7 @@ const Sec = styled.div`
     align-items: center;
 `
 const BlogContainer = styled.div`
-    flex: 0 1 30%;
+    flex: 0 1 20%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,6 +31,7 @@ const BlogContainer = styled.div`
     height: 50%;
     @media screen and (max-width: 800px){
        margin-top: -30%;
+       flex: 0 1 40%;
     }
 `
 const BlogImage = styled.img`

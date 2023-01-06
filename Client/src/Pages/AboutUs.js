@@ -6,7 +6,7 @@ import StroryIntro from "../Component/StoryIntro/StoryIntro";
 const AboutUs = (props) => {
     return ( 
         <>
-            <Cover Cover1text = {props.Covertext}/>
+            <Cover Cover1text = {props.Covertext} view2={props.view1}/>
             <StroryIntro/>
             <AboutUsComponent/>
             {/* <Testimonials/> */}

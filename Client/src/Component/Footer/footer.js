@@ -1,5 +1,6 @@
 import img from "../Images/Logo-removebg-preview.png"
 import styled from "styled-components";
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
 const Footer = () => {
@@ -129,6 +130,9 @@ const Footer = () => {
                 <Icon>
                     <FontAwesomeIcon icon={faInstagram}/>
                 </Icon>
+            </Sec>
+            <Sec>
+                <p>Developed By <Link className = "li" to="/Developer">Aravinda Chathuranga Fernando</Link></p>
             </Sec>
             <HR />
             <Sec>

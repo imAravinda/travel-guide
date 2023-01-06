@@ -5,7 +5,7 @@ import BlogsComponent from "../Component/blog/blog";
 const Blogs = (props) => {
     return ( 
         <div>
-            <Cover Cover1text = {props.Covertext}/>
+            <Cover Cover1text = {props.Covertext} view2={props.view1}/>
             <StroryIntro/>
             <BlogsComponent/>
             {/* <Testimonials/> */}

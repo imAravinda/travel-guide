@@ -8,7 +8,6 @@ import Footer from './Component/Footer/footer';
 import ScrollToTop from './Hooks/ScrollToTop';
 import content from './Data/Content';
 import Destination from './Pages/Destination';
-import Blog from './Pages/Blog';
 import AboutUs from './Pages/AboutUs';
 import Aos from "aos";
 import { useEffect, useState } from "react";
@@ -16,6 +15,7 @@ import "aos/dist/aos.css";
 import { BeatLoader } from 'react-spinners';
 import Login from './Component/Login/Login';
 import SideNavBar from './Component/Navbar/SideNavbar';
+import Blogs from './Pages/Blog';
 function App() {
   const GlobalStyle = createGlobalStyle `
     body{
@@ -63,17 +63,17 @@ function App() {
                           
                           <Route exact path="/destination">
                             <div>
-                              <Destination Covertext={content[1]}/>
+                              <Destination Covertext={content[1]} view1={view}/>
                             </div>
                           </Route>
                           <Route exact path="/blogs">
                             <div>
-                              <Blog Covertext={content[2]}/>
+                              <Blogs Covertext={content[2]} view1={view}/>
                             </div>
                           </Route>
                           <Route exact path="/aboutUs">
                             <div>
-                              <AboutUs Covertext={content[3]}/>
+                              <AboutUs Covertext={content[3]} view1={view}/>
                             </div>
                           </Route>
                           <Footer/>

@@ -104,9 +104,9 @@ const Navbar = (props) => {
                     </Links>
                     <Links>
                         <Ul>
-                            <Li className="li" onClick={ScrollToTop}><Link to="/">Home<Span className="Ho"></Span></Link></Li>
+                            <Li className="li" onClick={ScrollToTop}><Link to="./">Home<Span className="Ho"></Span></Link></Li>
                             <Li className="li" onClick={ScrollToTop}><Link to="./destination">Destinations<Span className="Ho"></Span></Link></Li>
-                            <Li className="li" onClick={ScrollToTop}><Link to="./blog">Blogs<Span className="Ho"></Span></Link></Li>
+                            <Li className="li" onClick={ScrollToTop}><Link to="./blogs">Blogs<Span className="Ho"></Span></Link></Li>
                             <Li className="li" onClick={ScrollToTop}><Link to="./aboutUs">About Us<Span className="Ho"></Span></Link></Li>
                             {/* <Li className="li" onClick={ScrollToTop}><Link to=" ">Contact Us<Span className="Ho"></Span></Link></Li> */}
                         </Ul>
@@ -121,7 +121,7 @@ const Navbar = (props) => {
                         <Ul>
                             <Li className="li" onClick={ScrollToTop}><Link to="/">Home<Span className="Ho"></Span></Link></Li>
                             <Li className="li" onClick={ScrollToTop}><Link to="./destination">Destinations<Span className="Ho"></Span></Link></Li>
-                            <Li className="li" onClick={ScrollToTop}><Link to="./blog">Blogs<Span className="Ho"></Span></Link></Li>
+                            <Li className="li" onClick={ScrollToTop}><Link to="./blogs">Blogs<Span className="Ho"></Span></Link></Li>
                             <Li className="li" onClick={ScrollToTop}><Link to="./aboutUs">About Us<Span className="Ho"></Span></Link></Li>
                             {/* <Li className="li" onClick={ScrollToTop}><Link to=" ">Contact Us<Span className="Ho"></Span></Link></Li> */}
                         </Ul>
